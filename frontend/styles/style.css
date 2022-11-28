@@ -28,4 +28,209 @@ nav .links li {
 nav .links li:hover {
   border-bottom: 3px solid purple;
   cursor: pointer;
+}
+
+.introduction {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+.introduction .descriere {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+.introduction .descriere h1 {
+  font-family: Merriweather;
+  font-size: 43px;
+  font-weight: 900;
+  line-height: 52px;
+  color: #252f65;
+  inline-size: 600px;
+}
+.introduction .descriere p {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 23px;
+  inline-size: 450px;
+}
+.introduction .descriere button {
+  background: #6f3096;
+  color: white;
+  border-radius: 5px;
+  padding: 20px 50px;
+  font-family: Merriweather;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  font-family: Merriweather;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  border: none;
+}
+
+.upload {
+  background-color: #6f3096;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+.upload .text h1 {
+  font-family: Merriweather;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: 0em;
+  inline-size: 400px;
+}
+.upload .text p {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 27px;
+  letter-spacing: 0em;
+  inline-size: 300px;
+}
+.upload .bgw {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  height: 400px;
+  width: 850px;
+  border-radius: 20px;
+}
+.upload .bgw .text {
+  padding: 0 40px;
+}
+.upload .bgw .text h1 {
+  inline-size: 400px;
+}
+.upload .bgw .text p {
+  font-family: Roboto;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.upload .bgw .send {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+.upload .bgw .send .descriere {
+  border: 1px solid #06114f;
+  border-radius: 5px;
+  width: 300px;
+  height: 40px;
+  text-align: left;
+}
+.upload .bgw .send .descriere::-moz-placeholder {
+  font-family: Merriweather;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: rgba(6, 17, 79, 0.3);
+}
+.upload .bgw .send .descriere:-ms-input-placeholder {
+  font-family: Merriweather;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: rgba(6, 17, 79, 0.3);
+}
+.upload .bgw .send .descriere::placeholder {
+  font-family: Merriweather;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: rgba(6, 17, 79, 0.3);
+}
+.upload .bgw .send .drag {
+  height: 140px;
+  width: 300px;
+  border: 1px solid #06114f;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.upload .bgw .send .drag::-moz-placeholder {
+  font-family: Merriweather;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: rgba(6, 17, 79, 0.3);
+}
+.upload .bgw .send .drag:-ms-input-placeholder {
+  font-family: Merriweather;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: rgba(6, 17, 79, 0.3);
+}
+.upload .bgw .send .drag::placeholder {
+  font-family: Merriweather;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: rgba(6, 17, 79, 0.3);
+}
+.upload .bgw .send button {
+  background: #6f3096;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 25px;
+  font-family: Merriweather;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  cursor: pointer;
+  text-align: center;
+  overflow: hidden;
+  border: none;
+}
+
+.colection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px 10px;
+  gap: 30px;
+}
+.colection h1 {
+  font-family: Merriweather;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 45px;
+  padding-left: 50px;
+  color: #252f65;
+}
+.colection .images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
