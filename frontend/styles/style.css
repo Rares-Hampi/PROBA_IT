@@ -1,1 +1,31 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+}
+nav .links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+nav .links li {
+  font-family: Merriweather;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 25px;
+}
+nav .links li:hover {
+  border-bottom: 3px solid purple;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
