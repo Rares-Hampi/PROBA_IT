@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 nav {
   position: fixed;
   background-color: white;
@@ -27,6 +32,114 @@ nav .links li {
 }
 nav .links li:hover {
   border-bottom: 3px solid purple;
+  cursor: pointer;
+}
+
+.page {
+  filter: blur(2px);
+}
+
+.pop_up {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 3;
+  width: 500px;
+  height: 700px;
+  align-self: center;
+  top: 5%;
+  display: none;
+}
+.pop_up .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+}
+.pop_up .nav i {
+  font-size: 30px;
+  color: #252f65;
+  cursor: pointer;
+}
+.pop_up .form {
+  align-self: center;
+  background-color: #6f3096;
+  height: 550px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pop_up .form form {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+.pop_up .form form h1 {
+  font-family: Merriweather;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #6f3096;
+}
+.pop_up .form form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+}
+.pop_up .form form div label {
+  font-family: Merriweather;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #252f65;
+  text-align: left;
+}
+.pop_up .form form div input {
+  height: 36px;
+  width: 250px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #252f65;
+}
+.pop_up .form form div input::-moz-placeholder {
+  padding-left: 5px;
+  font-size: 20px;
+}
+.pop_up .form form div input:-ms-input-placeholder {
+  padding-left: 5px;
+  font-size: 20px;
+}
+.pop_up .form form div input::placeholder {
+  padding-left: 5px;
+  font-size: 20px;
+}
+.pop_up .form form div input:focus {
+  font-size: 20px;
+  font-weight: 700;
+}
+.pop_up .form form button {
+  width: 50%;
+  height: 60px;
+  border-radius: 5px;
+  background: #6f3096;
+  border: none;
+  font-family: Merriweather;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  color: white;
   cursor: pointer;
 }
 

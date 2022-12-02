@@ -16,85 +16,133 @@
   </head>
   <body>
     <!-- nav bar -->
-    <nav>
-      <ul class="logo">
-        <img src="images/Asset 2@4x 1.png" alt="MEMEIT?" />
-      </ul>
-
-      <ul class="links">
-        <li>Logare</li>
-        <li>Creare cont</li>
-      </ul>
-    </nav>
-
-    <!-- first section-->
-    <section class="introduction">
-      <div class="descriere">
-        <h1>Partajarea de meme-uri nu a fost niciodata mai simpla!</h1>
-        <p>
-          Platforma ideală pentru studenții de la Politehnică, amuzați de câte
-          materii o să pice semestrul asta.
-        </p>
-        <a href="#upload"><button>Upload a MEME</button></a>
+    <section class="pop_up" id="login">
+      <div class="nav">
+        <img src="images/Asset 2@4x 1.png" alt="" />
+        <i class="fa-solid fa-circle-xmark" onclick="closeLogin()"></i>
       </div>
-      <img src="images/WhatsApp Image 2022-11-14 at 02.23 1.png" alt="" />
+      <div class="form">
+        <form>
+          <h1>Welcome back</h1>
+          <div>
+            <label for="text">Username</label>
+            <input type="text" placeholder="username" />
+          </div>
+          <div>
+            <label for="text">Parola</label>
+            <input type="text" placeholder="parola" />
+          </div>
+
+          <button>Logare</button>
+        </form>
+      </div>
     </section>
 
-    <main class="upload" id="upload">
-      <section class="bgw">
-        <div class="text">
-          <h1>Ai tupeu și crezi că ești amuzant?</h1>
+    <section class="pop_up" id="register">
+      <div class="nav">
+        <img src="images/Asset 2@4x 1.png" alt="" />
+        <i class="fa-solid fa-circle-xmark" onclick="closeRegister()"></i>
+      </div>
+      <div class="form">
+        <form>
+          <h1>Welcome</h1>
+          <div><label for="text">Username</label> <input type="text" /></div>
+          <div><label for="text">Email</label> <input type="email" /></div>
+          <div><label for="text">Parola</label><input type="text" /></div>
+
+          <button>Inregistrare</button>
+        </form>
+      </div>
+    </section>
+
+    <main id="page">
+      <nav>
+        <ul class="logo">
+          <img src="images/Asset 2@4x 1.png" alt="MEMEIT?" />
+        </ul>
+
+        <ul class="links">
+          <li onclick="openLogin()">Logare</li>
+          <li onclick="openRegister()">Creare cont</li>
+        </ul>
+      </nav>
+
+      <!-- first section-->
+      <section class="introduction">
+        <div class="descriere">
+          <h1>Partajarea de meme-uri nu a fost niciodata mai simpla!</h1>
           <p>
-            Trimite-ne un mail și poate ai noroc să ne apuce râsul când îți
-            vedem meme-ul.
+            Platforma ideală pentru studenții de la Politehnică, amuzați de câte
+            materii o să pice semestrul asta.
           </p>
+          <a href="#upload"><button>Upload a MEME</button></a>
         </div>
+        <img src="images/WhatsApp Image 2022-11-14 at 02.23 1.png" alt="" />
+      </section>
 
-        <div class="send">
-          <div>
-            <label for="TEXT">Descriere</label> <br />
-            <input type="text" placeholder="descriere" class="descriere" />
-          </div>
-          <div>
-            <label for="TEXT">Meme (jpg, jpeg, png, gif) </label>
-            <input
-              type="text"
-              placeholder="drag & drop image or click to upload"
-              class="drag"
-            />
+      <section class="upload">
+        <div class="bgw">
+          <div class="text">
+            <h1>Ai tupeu și crezi că ești amuzant?</h1>
+            <p>
+              Trimite-ne un mail și poate ai noroc să ne apuce râsul când îți
+              vedem meme-ul.
+            </p>
           </div>
 
-          <button>Trimite</button>
+          <div class="send">
+            <div>
+              <label for="TEXT">Descriere</label> <br />
+              <input
+                type="text"
+                placeholder="descriere"
+                class="descriere"
+                draggable="true"
+              />
+            </div>
+            <div>
+              <label for="TEXT">Meme (jpg, jpeg, png, gif) </label>
+              <input
+                type="file"
+                placeholder="drag & drop image or click to upload"
+                class="drag"
+                draggable="true"
+              />
+            </div>
+
+            <button>Trimite</button>
+          </div>
         </div>
       </section>
+
+      <!-- third section -->
+
+      <section class="colection">
+        <h1>Most Viewed</h1>
+        <div class="images">
+          <img src="images/image 1.png" alt="Image1" />
+          <img src="images/Rectangle 21.png" alt="Image2" />
+          <img src="images/image 5.png" alt="Image3" />
+        </div>
+      </section>
+
+      <!-- last section -->
+      <section class="footer">
+        <div class="icons">
+          <a href="https://www.instagram.com/lsacbucuresti/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://www.twitch.tv/lsac_bucuresti"
+            ><i class="fa-brands fa-twitch"></i
+          ></a>
+          <a href="https://www.facebook.com/LsacBucuresti/"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+        </div>
+
+        <p>Copyright 2022 | La muncă, nu la întins mâna.</p>
+      </section>
     </main>
-
-    <!-- third section -->
-
-    <section class="colection">
-      <h1>Most Viewed</h1>
-      <div class="images">
-        <img src="images/image 1.png" alt="Image1" />
-        <img src="images/Rectangle 21.png" alt="Image2" />
-        <img src="images/image 5.png" alt="Image3" />
-      </div>
-    </section>
-
-    <!-- last section -->
-    <section class="footer">
-      <div class="icons">
-        <a href="https://www.instagram.com/lsacbucuresti/"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <a href="https://www.twitch.tv/lsac_bucuresti"
-          ><i class="fa-brands fa-twitch"></i
-        ></a>
-        <a href="https://www.facebook.com/LsacBucuresti/"
-          ><i class="fa-brands fa-square-facebook"></i
-        ></a>
-      </div>
-
-      <p>Copyright 2022 | La muncă, nu la întins mâna.</p>
-    </section>
+    <script src="app.js"></script>
   </body>
 </html>
