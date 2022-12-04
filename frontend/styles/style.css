@@ -235,7 +235,6 @@ nav .links #dec {
   font-size: 22px;
   font-weight: 300;
   line-height: 27px;
-  letter-spacing: 0em;
   text-align: left;
 }
 .upload .bgw .send {
@@ -274,36 +273,27 @@ nav .links #dec {
   line-height: 30px;
   color: rgba(6, 17, 79, 0.3);
 }
-.upload .bgw .send .drag {
+.upload .bgw .send .drop-zone {
   height: 140px;
   width: 300px;
   border: 1px solid #06114f;
   border-radius: 5px;
-  overflow: hidden;
-  text-align: center;
-  box-sizing: border-box;
   cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.upload .bgw .send .drag::-moz-placeholder {
+.upload .bgw .send .drop-zone p {
   font-family: Merriweather;
   font-size: 16px;
   font-weight: 700;
   line-height: 30px;
+  inline-size: 230px;
   color: rgba(6, 17, 79, 0.3);
 }
-.upload .bgw .send .drag:-ms-input-placeholder {
-  font-family: Merriweather;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 30px;
-  color: rgba(6, 17, 79, 0.3);
-}
-.upload .bgw .send .drag::placeholder {
-  font-family: Merriweather;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 30px;
-  color: rgba(6, 17, 79, 0.3);
+.upload .bgw .send .drop-zone .drop {
+  display: none;
 }
 .upload .bgw .send button {
   background: #6f3096;
