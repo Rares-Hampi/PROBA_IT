@@ -1,12 +1,9 @@
 const login = document.getElementById("login");
 const register = document.getElementById("register");
 const page = document.getElementById("page");
-const logare = document.getElementById("btn_login");
 const unlog = document.getElementById("dec");
 const log = document.getElementById("log");
 const reg = document.getElementById("reg");
-
-//localStorage.setItem("Status", "Delogat");
 
 function openLogin() {
   login.style.display = "block";
