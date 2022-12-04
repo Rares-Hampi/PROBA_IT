@@ -15,7 +15,7 @@
     <title>Proba IT</title>
   </head>
   <body>
-    <!-- nav bar -->
+    <!-- popup elements-->
     <section class="pop_up" id="login">
       <div class="nav">
         <img src="images/Asset 2@4x 1.png" alt="" />
@@ -33,7 +33,7 @@
             <input type="text" placeholder="parola" />
           </div>
 
-          <button>Logare</button>
+          <button onclick="Login()" id="" btn_login>Logare</button>
         </form>
       </div>
     </section>
@@ -56,14 +56,16 @@
     </section>
 
     <main id="page">
+      <!-- nav bar -->
       <nav>
         <ul class="logo">
           <img src="images/Asset 2@4x 1.png" alt="MEMEIT?" />
         </ul>
 
         <ul class="links">
-          <li onclick="openLogin()">Logare</li>
-          <li onclick="openRegister()">Creare cont</li>
+          <li onclick="openLogin()" id="log">Logare</li>
+          <li onclick="openRegister()" id="reg">Creare cont</li>
+          <li onclick="disconect()" id="dec">Deconectare</li>
         </ul>
       </nav>
 
@@ -93,20 +95,14 @@
           <div class="send">
             <div>
               <label for="TEXT">Descriere</label> <br />
-              <input
-                type="text"
-                placeholder="descriere"
-                class="descriere"
-                draggable="true"
-              />
+              <input type="text" placeholder="descriere" class="descriere" />
             </div>
             <div>
               <label for="TEXT">Meme (jpg, jpeg, png, gif) </label>
               <input
-                type="file"
+                type="text"
                 placeholder="drag & drop image or click to upload"
                 class="drag"
-                draggable="true"
               />
             </div>
 
