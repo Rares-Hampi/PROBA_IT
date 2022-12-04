@@ -46,10 +46,11 @@ nav .links #dec {
 .pop_up {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   z-index: 3;
   width: 500px;
   height: 700px;
+  top: 10%;
   align-self: center;
   display: none;
 }

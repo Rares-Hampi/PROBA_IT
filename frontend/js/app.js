@@ -9,23 +9,28 @@ function openLogin() {
   login.style.display = "block";
   register.style.display = "none";
   page.classList.add("page");
+  disableScroll();
 }
 function closeLogin() {
   login.style.display = "none";
   page.classList.remove("page");
+  enableScroll();
 }
 function openRegister() {
   register.style.display = "block";
   login.style.display = "none";
   page.classList.add("page");
+  disableScroll();
 }
 function closeRegister() {
   register.style.display = "none";
   page.classList.remove("page");
+  enableScroll();
 }
 
 function Login() {
   localStorage.setItem("Status", "Logat");
+  enableScroll();
 }
 
 function disconect() {
@@ -43,4 +48,16 @@ function check() {
     log.style.display = "block";
     reg.style.display = "block";
   }
+}
+
+function disableScroll() {
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  (scrollLeft = window.pageXOffset || document.documentElement.scrollLeft),
+    (window.onscroll = function () {
+      window.scrollTo(scrollLeft, scrollTop);
+    });
+}
+
+function enableScroll() {
+  window.onscroll = function () {};
 }
