@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -22,18 +28,30 @@
         <i class="fa-solid fa-circle-xmark" onclick="closeLogin()"></i>
       </div>
       <div class="form">
-        <form>
+        <form id="form_log">
           <h1>Welcome back</h1>
           <div>
             <label for="text">Username</label>
-            <input type="text" placeholder="username" />
+            <input
+              type="text"
+              placeholder="username"
+              id="log_name"
+              required
+              oninvalid="this.setCustomValidity('Te rugam sa-ti adaugi numele  si acesta sa aiba minim 4 litere')"
+            />
           </div>
           <div>
             <label for="text">Parola</label>
-            <input type="text" placeholder="parola" />
+            <input
+              type="text"
+              placeholder="parola"
+              id="log_parola"
+              required
+              oninvalid="this.setCustomValidity('Te rugam sa-ti adaugi  parola si aceasta sa aiba minim 6 litere')"
+            />
           </div>
 
-          <button onclick="Login()" type="submit">Logare</button>
+          <button type="submit">Logare</button>
         </form>
       </div>
     </section>
@@ -44,24 +62,48 @@
         <i class="fa-solid fa-circle-xmark" onclick="closeRegister()"></i>
       </div>
       <div class="form">
-        <form>
+        <form id="form_reg">
           <h1>Welcome</h1>
-          <div><label for="text">Username</label> <input type="text" /></div>
-          <div><label for="text">Email</label> <input type="email" /></div>
-          <div><label for="text">Parola</label><input type="text" /></div>
+          <div>
+            <label for="text">Username</label>
+            <input
+              type="text"
+              required
+              oninvalid="this.setCustomValidity('Te rugam sa adaugi un nume si acesta sa aiba minim 4 litere')"
+              id="username"
+            />
+          </div>
+          <div>
+            <label for="text">Email</label>
+            <input
+              type="email"
+              required
+              oninvalid="this.setCustomValidity('Te rugam sa adaugi un email de forma nume@stud.acs.upb.ro')"
+              id="email"
+            />
+          </div>
+          <div>
+            <label for="text">Parola</label
+            ><input
+              type="text"
+              required
+              oninvalid="this.setCustomValidity('Te rugam sa adaugi o parola si aceasta sa aiba minim 6 litere')"
+              id="parola"
+            />
+          </div>
 
-          <button onclick="Login()" type="submit">Inregistrare</button>
+          <button type="submit" id="reg_btn">Inregistrare</button>
         </form>
       </div>
     </section>
 
     <main id="page">
       <!-- nav bar -->
-      <nav>
+      <nav id="navbar" class="nav">
         <ul class="logo">
           <img src="images/Asset 2@4x 1.png" alt="MEMEIT?" />
         </ul>
-
+        <i class="fa-solid fa-bars" id="nav_icon"></i>
         <ul class="links">
           <li onclick="openLogin()" id="log">Logare</li>
           <li onclick="openRegister()" id="reg">Creare cont</li>
@@ -92,10 +134,16 @@
             </p>
           </div>
 
-          <div class="send">
+          <form class="send">
             <div>
               <label for="text">Descriere</label> <br />
-              <input type="text" placeholder="descriere" class="descriere" />
+              <input
+                type="text"
+                placeholder="descriere"
+                class="descriere"
+                required
+                oninvalid="this.setCustomValidity('Te rugam sa adaugi o descriere')"
+              />
             </div>
             <div>
               <label for="file">Meme (jpg, jpeg, png, gif) </label>
@@ -110,12 +158,14 @@
                   id="drop_input"
                   multiple
                   name="filename"
+                  required
+                  oninvalid="this.setCustomValidity('Te rugam sa adaugi o poza')"
                 />
               </div>
             </div>
 
             <button type="submit">Trimite</button>
-          </div>
+          </form>
         </div>
       </section>
 
@@ -147,7 +197,8 @@
         <p>Copyright 2022 | La muncă, nu la întins mâna.</p>
       </section>
     </main>
-    <script src="js/app.js"></script>
+    <script src="js/form.js"></script>
     <script src="js/drag.js"></script>
+    <script src="js/navbar.js"></script>
   </body>
 </html>
