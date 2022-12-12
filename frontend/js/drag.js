@@ -1,6 +1,7 @@
 const dragZone = document.getElementById("drop-zone");
 const inputElem = document.getElementById("drop_input");
 let text = document.getElementById("text");
+const btn = document.getElementById("upload_btn");
 
 dragZone.addEventListener("click", (e) => {
   inputElem.click();
@@ -25,3 +26,10 @@ function afisare(file) {
   text.appendChild(document.createTextNode(file));
   dragZone.appendChild(text);
 }
+
+btn.addEventListener("click", (e) => {
+  if (inputElem.value) {
+  } else {
+    alert("trebuie sa incarci meme-ul");
+  }
+});
