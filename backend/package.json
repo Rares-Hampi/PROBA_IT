@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.8.0",
     "morgan": "^1.10.0",
@@ -9,9 +10,9 @@
   "name": "proba_it-1",
   "description": "- -[x] Task1\r - -[x] Task2\r - -[x] Task3\r - -[x] Task4\r - -[x] Task5\r - -[x] Task6",
   "version": "1.0.0",
-  "main": "test.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon test.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
