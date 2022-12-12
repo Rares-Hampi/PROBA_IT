@@ -382,7 +382,7 @@ nav .links #dec {
     aspect-ratio: 1/1;
     width: auto;
   }
-  nav i {
+  nav .fa-solid {
     display: block;
     color: #263238;
     font-size: 35px;

@@ -145,26 +145,26 @@
                 oninvalid="this.setCustomValidity('Te rugam sa adaugi o descriere')"
               />
             </div>
-            <div>
-              <label for="file">Meme (jpg, jpeg, png, gif) </label>
-              <div class="drop-zone" id="drop-zone">
-                <p class="placeholder" id="text" name="filename">
-                  drag & drop image or click to upload
-                </p>
-                <input
-                  type="file"
-                  accept="image/png, image/jpg, image/jpeg, image/gif"
-                  class="drop"
-                  id="drop_input"
-                  multiple
-                  name="filename"
-                  required
-                  oninvalid="this.setCustomValidity('Te rugam sa adaugi o poza')"
-                />
-              </div>
+
+            <label for="file">Meme (jpg, jpeg, png, gif) </label>
+            <div class="drop-zone" id="drop-zone">
+              <p class="placeholder" id="text" name="filename">
+                drag & drop image or click to upload
+              </p>
+              <input
+                type="file"
+                accept="image/png, image/jpg, image/jpeg,
+              image/gif"
+                class="drop"
+                id="drop_input"
+                multiple
+                required
+                oninvalid="this.setCustomValidity('Te rugam sa adaugi o poza')"
+                name="file"
+              />
             </div>
 
-            <button type="submit">Trimite</button>
+            <button type="submit" id="upload_btn">Trimite</button>
           </form>
         </div>
       </section>
