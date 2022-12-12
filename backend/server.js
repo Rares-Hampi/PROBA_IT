@@ -1,0 +1,28 @@
+require("dotenv").config();
+const express = require("express");
+const app = express();
+const userRoutes = require("./routes/userRoute");
+const mongoose = require("mongoose");
+mongoose.set("strictQuery", false);
+
+app.use(express.json());
+
+app.use((req, res, next) => {
+  console.log(req.path, res.method);
+  next();
+});
+
+app.use("/user", userRoutes);
+
+mongoose
+  .connect(process.env.MONGO_URL)
+  .then(() => {
+    console.log("connected");
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+app.listen(process.env.PORT, () => {
+  console.log("App listen on port", process.env.PORT);
+});
