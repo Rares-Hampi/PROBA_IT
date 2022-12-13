@@ -4,7 +4,7 @@ mongoose.set("strictQuery", false);
 
 const memeSchema = new mongoose.Schema({
   username: { type: String, required: true },
-  meme: { type: Array, required: true },
+  img: { type: String, required: true },
   descriere: { type: String, required: true },
 });
 

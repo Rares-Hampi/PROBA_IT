@@ -6,7 +6,7 @@ const {
   getUser,
   deleteUser,
   updateUser,
-} = require("../crud/crud");
+} = require("../crud/userCrud");
 
 router.get("/", getUsers);
 router.get("/:id", getUser);
