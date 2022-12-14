@@ -27,10 +27,15 @@ const getMeme = async (req, res) => {
 
 const addMeme = async (req, res) => {
   const { username, img, descriere } = req.body;
-  const user = await User.find({ username });
+  const user = await User.findOne({ username });
 
   if (!user) {
     return res.status(400).json({ err: "Nu am gasit userul dorit" });
+  }
+  if (descriere.lenth > 2500) {
+    return res
+      .status(400)
+      .json({ descriere: "the field is not between 0 and 2500 characters" });
   }
 
   console.log(user);
@@ -48,8 +53,10 @@ const addMeme = async (req, res) => {
 
 const deleteMeme = async (req, res) => {
   const { id } = req.params;
+  const { username } = req.body;
 
-  const user = await User.find({ username });
+  const user = await User.findOne({ username });
+
   if (!user) {
     return res.status(400).json({ err: "Nu am gasit userul dorit" });
   }
@@ -61,23 +68,49 @@ const deleteMeme = async (req, res) => {
   const meme = await Meme.findOneAndDelete({ _id: id });
 
   if (!meme) {
-    return res.status(400).json({ err: "Nu am gasit userul dorit" });
+    return res.status(400).json({ err: "Nu am gasit meme-ul dorit" });
   }
+
+  user.memes = user.memes.filter((item) => {
+    return item.id != meme.id;
+  });
+
+  await user.save();
 
   res.status(200).json(meme);
 };
 
 const updateMeme = async (req, res) => {
   const { id } = req.params;
+  const { username, descriere } = req.body;
+
+  const user = await User.findOne({ username });
+
+  if (!user) {
+    return res.status(400).json({ err: "Nu am gasit userul dorit" });
+  }
+
+  if (descriere.lenth > 2500) {
+    return res
+      .status(400)
+      .json({ descriere: "the field is not between 0 and 2500 characters" });
+  }
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(404).json({ err: "Id-ul nu este corect" });
   }
-  const meme = await Meme.findByIdAndUpdate({ _id: id }, { ...req.body });
+  const meme = await Meme.findByIdAndUpdate({ _id: id }, { descriere });
 
   if (!meme) {
     return res.status(400).json({ err: "Nu am gasit userul dorit" });
   }
+  user.memes = user.memes.filter((item) => {
+    if (item.id == meme.id) {
+      item.descriere = descriere;
+    }
+    return item;
+  });
+  await user.save();
 
   res.status(200).json(meme);
 };

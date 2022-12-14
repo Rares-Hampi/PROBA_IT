@@ -9,7 +9,6 @@ mongoose.set("strictQuery", false);
 app.use(express.json());
 
 app.use((req, res, next) => {
-  console.log(req.path, res.method);
   next();
 });
 

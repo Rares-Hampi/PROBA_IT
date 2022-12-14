@@ -24,17 +24,6 @@ const getUser = async (req, res) => {
   res.status(200).json(user);
 };
 
-const addUser = async (req, res) => {
-  const { username, mail, password } = req.body;
-
-  try {
-    const user = await User.create({ username, mail, password });
-    res.status(200).json(user);
-    console.log("merge");
-  } catch (err) {
-    res.status(400).json({ error: err.message });
-  }
-};
 const deleteUser = async (req, res) => {
   const { id } = req.params;
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -55,6 +44,7 @@ const updateUser = async (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(404).json({ err: "Id-ul nu este corect" });
   }
+
   const user = await User.findByIdAndUpdate({ _id: id }, { ...req.body });
 
   if (!user) {
@@ -65,7 +55,6 @@ const updateUser = async (req, res) => {
 };
 
 module.exports = {
-  addUser,
   getUsers,
   getUser,
   deleteUser,

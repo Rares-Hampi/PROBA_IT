@@ -7,11 +7,12 @@ const {
   deleteMeme,
   updateMeme,
 } = require("../crud/memeCrud");
+const { status } = require("../middleware/mware");
 
 router.get("/", getMemes);
-router.get("/meme/:id", getMeme);
-router.post("/", addMeme);
-router.delete("/:id", deleteMeme);
-router.patch("/:id", updateMeme);
+router.get("/:id", getMeme);
+router.post("/", status, addMeme);
+router.delete("/:id", status, deleteMeme);
+router.patch("/:id", status, updateMeme);
 
 module.exports = router;
